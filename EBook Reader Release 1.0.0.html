@@ -1,0 +1,24 @@
+<title>EBook Reader Release 1.0.0</title>
+<h1>EBook Reader</h1>
+<h2>Release 1.0.0</h2>
+<h2 id="page">Page Number</h2>
+<button onclick="renderpage(-1)">&lt; Previous Page</button>
+<button onclick="renderpage(1)">Next Page &gt;</button>
+<button onclick="openlauncher()">Open Launcher</button>
+<p id="text"></p>
+<script>
+var text = document.getElementById("text");
+var pagenum = document.getElementById("page");
+let page = 0;
+let data = prompt("Enter data", "Test Data");
+let obj = JSON.parse(data);
+renderpage(0);
+function renderpage(adder) {
+  page += adder;
+  text.innerHTML = obj.text[page];
+  pagenum.innerHTML = ("Page " + page);
+}
+function openlauncher() {
+  window.open('index.html');
+}
+</script>

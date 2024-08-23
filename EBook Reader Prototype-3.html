@@ -1,0 +1,14 @@
+<title>EBook Reader Prototype 3</title>
+<h1>EBook Reader</h1>
+<h2>Prototype-3</h2>
+<h2 id="page">Page Number</h2>
+<p id="text"></p>
+<script>
+var text = document.getElementById("text");
+var pagenum = document.getElementById("page");
+let page = 0;
+let data = prompt("Enter data", "Test Data");
+let obj = JSON.parse(data);
+text.innerHTML = obj.text[page];
+pagenum.innerHTML = ("Page " + page);
+</script>

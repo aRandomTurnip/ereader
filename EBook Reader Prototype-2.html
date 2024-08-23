@@ -1,0 +1,10 @@
+<title>EBook Reader Prototype 2</title>
+<h1>EBook Reader</h1>
+<h2>Prototype-2</h2>
+<p id="text"></p>
+<script>
+var text = document.getElementById("text");
+let data = prompt("Enter data", "Test Data");
+let obj = JSON.parse(data);
+text.innerHTML = obj.text[0];
+</script>
